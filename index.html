@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./logo.jpg">
+</head>
+<body>
+    
+    <button onclick="agent()">Create Agent</button>
+    <button onclick="delivery()">Create Delivery</button>
+
+    <br><br><br>
+
+    <button onclick="showcard()">Card View</button>
+    <button onclick="showtable()">Table View</button>
+
+    <div class="container">
+        <div class="table" id="table">
+            <table class="mytable" id="mytable">
+                <tr>
+                    <th>Product</th>
+                    <th>Agent</th>
+                    <th>Status</th>
+                    <th>Arriving in (mins)</th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="setcard" id="setcard">
+
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Delivery Agent Detail</h2>
+            <label for="name">Agent Name</label>
+            <input type="text" name="name" id="name"><br><br>
+            <label for="phone">Phone Number</label>
+            <input type="number" name="phone" id="phone"><br><br>
+            <label for="email">Email Detail</label>
+            <input type="email" name="email" id="email"><br><br>
+
+            <button onclick="addAgent()">Save</button>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal2" class="modal2">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Delivery</h2>
+            <label for="pname">Product Name</label>
+            <input type="text" name="pname" id="pname"><br><br>
+            <label for="aname">Agent Name</label>
+            <select id="aname"></select><br><br>
+            <label for="distance">Distance from Inventory</label>
+            <input type="number" name="distance" id="distance" placeholder="in kms"><br><br>
+            <label for="time">Agent delivery Starting Time</label>
+            <input type="time" name="time" id="time"><br><br>
+
+            <button onclick="getDelivery()">Save</button>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+<script src="./script.js">
+</script>
+
+</html>
